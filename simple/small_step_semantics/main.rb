@@ -1,6 +1,7 @@
 def load_files
   files = ['base.rb',
            'machine.rb',
+           'variable.rb',
            'values/base_value.rb',
            'values/number.rb',
            'values/boolean.rb',
@@ -14,7 +15,7 @@ def load_files
 end
 
 def clear
-  classes = [:Base, :Machine, :BaseValue, :Boolean, :Number,
+  classes = [:Base, :Machine, :Variable, :BaseValue, :Boolean, :Number,
              :Operation, :Add, :Multiply, :LessThan]
 
   classes.each {|x| Object.send(:remove_const, x)}

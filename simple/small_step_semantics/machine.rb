@@ -1,12 +1,13 @@
 class Machine
-  attr_accessor :expr
+  attr_accessor :expr, :env
 
-  def initialize(expr)
+  def initialize(expr, env)
     @expr = expr
+    @env = env
   end
 
   def step
-    self.expr = expr.reduce
+    self.expr = expr.reduce(env)
   end
 
   def run
