@@ -1,0 +1,2 @@
+class Boolean < BaseValue
+end
